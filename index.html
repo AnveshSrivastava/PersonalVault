@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Vault OS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i data-lucide="shield"></i>
+                <h2>Vault OS</h2>
+            </div>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                </nav>
+            <div class="sidebar-footer">
+                <button id="add-section-btn" class="btn btn-ghost">
+                    <i data-lucide="plus"></i> New Section
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-container">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="global-search" placeholder="Search fields, values, sections... (Ctrl+K)">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn" id="theme-toggle" title="Toggle Theme"><i data-lucide="sun"></i></button>
+                    <button class="icon-btn" id="export-btn" title="Export JSON"><i data-lucide="download"></i></button>
+                    <label class="icon-btn" title="Import JSON">
+                        <i data-lucide="upload"></i>
+                        <input type="file" id="import-btn" accept=".json" style="display: none;">
+                    </label>
+                </div>
+            </header>
+
+            <div class="content-area" id="content-area">
+                </div>
+        </main>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
